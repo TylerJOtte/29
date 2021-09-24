@@ -1,15 +1,124 @@
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+# The following is a list of file types that git does not track in this project. 
+# It is based upon Octocat's extensive compilation
+# (https://gist.github.com/octocat/9257657) and the standard Swift gitignore
+# template provided by GitHub (https://github.com).
+
+# ============================================================================ #
+					AUDIO
+# ============================================================================ #
+
+*.mp3
+*.wav
+*.wma
+
+# ============================================================================ #
+				COMPILED SOURCES
+# ============================================================================ #
+
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ============================================================================ #
+					GIT
+# ============================================================================ #
+
+# Merge files
+*.orig
+
+# ============================================================================ #
+				LOGS & DATABASES
+# ============================================================================ #
+
+*.log
+*.sql
+*.sqlite
+
+# ============================================================================ #
+				OS GENERATED FILES
+# ============================================================================ #
+
+# Finder metadata
+.DS_STORE
+.DS_STORE?
+
+._*
+.Spotlight-V100
+desktop.ini
+ehthumbs.db
+Thumbs.db
+
+# ============================================================================ #
+		    		     PACKAGES
+# ============================================================================ #
+
+# It is best to unpack and commit raw sources, because Git has its own
+# compression methods.
+
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# ============================================================================ #
+                           TEXT EDITOR GENERATED FILES
+# ============================================================================ #
+
+# Temporary files
+*~
+
+*#
+*.bak
+.classpath
+
+# CMake temporary files
+.atom-build.json
+CMakeCache.txt
+CMakeFiles
+
+.metadata
+.project
+.settings
+/.idea/workspace.xml
+/.idea/tasks.xml
+*.iml
+*.ipr
+
+# Byte-compiled Python modules
+*.pyc
+
+*.pyo
+*.sublime-workspace
+
+# Vim swap files
+.*.sw[a-z]
+.sw?
+
+# ---------------------------------------------------------------------------- #
+#				      Xcode			           
+# ---------------------------------------------------------------------------- #
+
+# gitignore contributors: remember to update Global/Xcode.gitignore,
+# Objective-C.gitignore & Swift.gitignore
 
 ## User settings
 xcuserdata/
 
-## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
+## compatibility with Xcode 8 and earlier 
+## (ignoring not required starting Xcode 9)
 *.xcscmblueprint
 *.xccheckout
 
-## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
+## compatibility with Xcode 3 and earlier
+## (ignoring not required starting Xcode 4)
+
 build/
 DerivedData/
 *.moved-aside
@@ -36,14 +145,19 @@ playground.xcworkspace
 
 # Swift Package Manager
 #
-# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+# Add this line if you want to avoid checking in source code from Swift Package
+# Manager dependencies.
+
 # Packages/
 # Package.pins
 # Package.resolved
 # *.xcodeproj
-#
-# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
-# hence it is not needed unless you have added a package configuration file to your project
+
+
+# Xcode automatically generates this directory with a .xcworkspacedata file and
+# xcuserdata hence it is not needed unless you have added a package configuration
+# file to your project
+
 # .swiftpm
 
 .build/
@@ -56,12 +170,14 @@ playground.xcworkspace
 #
 # Pods/
 #
-# Add this line if you want to avoid checking in source code from the Xcode workspace
+# Add this line if you want to avoid checking in source code from the Xcode
+# workspace
 # *.xcworkspace
 
 # Carthage
 #
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Add this line if you want to avoid checking in source code from Carthage
+# dependencies.
 # Carthage/Checkouts
 
 Carthage/Build/
