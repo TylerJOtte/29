@@ -81,12 +81,12 @@ The project's label guidelines are listed below.
 ### Issue Submission Process
 
 * Before submitting a new issue, check the
-  [issue list](https://github.com/TylerJOtte/Forge/issues) to see if a respective report already 
+  [issue list](https://github.com/TylerJOtte/29/issues) to see if a respective report already 
   exists.
 * If there's a matching *open* entry, do not open a new issue. Add a comment to the existing 
   issue instead.
 * If there's a matching *closed* entry, open a new issue, and include a link to the closed entry.
-* Otherwise, open up a new [issue](https://github.com/TylerJOtte/Forge/issues), and fill out its
+* Otherwise, open up a new [issue](https://github.com/TylerJOtte/29/issues), and fill out its
  containing form in sufficient detail. Please appropriately mark the entry in accordance with the
  project's [label conventions](#label-conventions).
 
