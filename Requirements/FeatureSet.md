@@ -1,6 +1,6 @@
 ================================================================================
 
-ProblemDefinition.md
+FeatureSet.md
 <br />29
 
 Created by Tyler J. Otte on 9/24/21.
@@ -14,18 +14,21 @@ Licensed under the GNU Affero General Public License v3.0.
 See https://github.com/TylerJOtte/29/LICENSE.txt for more details.
 <br />================================================================================
 
-# Problem Definition
+# Feature Set
 
-Help players swiftly count their hands and understand the hand ranks that
-produced the score.
+## Idea Storm
 
-**1. New & Intermittent Players**
+Any and all features that help the defined persona solve the defined problem:
 
-- [x] Simple hands
-- [x] Harder-to-count hands
+* Count a player's hand
+* Display a player's count breakdown by hand ranks
+* Provide a reference to all card combinations in the game
+* Track all hands of a player during a game
+* Track all hands of multiple players during a game
 
+## Minimum Viable Product
 
-**2. Experienced Players**
+**Only** the features that help the defined persona solve the defined problem.
 
- - [ ] Simple hands
- - [x] Harder-to-count hands
+* Count a player's hand
+* Display a player's count breakdown by hand ranks
