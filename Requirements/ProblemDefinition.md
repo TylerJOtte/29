@@ -11,7 +11,7 @@ This file is part of the 29 project.
 Copyright (c) 2021, Tyler J. Otte.
 Licensed under the GNU Affero General Public License v3.0.
 
-See https://github.com/TylerJOtte/29/LICENSE.txt for more details.
+See the full [license](https://github.com/TylerJOtte/29/LICENSE.txt) for more details.
 <br />================================================================================
 
 # Problem Definition
