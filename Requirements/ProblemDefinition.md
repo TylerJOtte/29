@@ -14,7 +14,7 @@ Licensed under the GNU Affero General Public License v3.0.
 See https://github.com/TylerJOtte/29/LICENSE.txt for more details.
 <br />================================================================================
 
-### Problem Definition
+# Problem Definition
 
 Help players swiftly count their hands and understand the hand ranks that
 produced the score.
