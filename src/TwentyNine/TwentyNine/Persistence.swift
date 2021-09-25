@@ -1,6 +1,6 @@
 //
 //  Persistence.swift
-//  29
+//  TwentyNine
 //
 //  Created by Tyler J. Otte on 9/25/21.
 //
@@ -31,7 +31,7 @@ struct PersistenceController {
     let container: NSPersistentCloudKitContainer
 
     init(inMemory: Bool = false) {
-        container = NSPersistentCloudKitContainer(name: "_9")
+        container = NSPersistentCloudKitContainer(name: "TwentyNine")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }

@@ -1,14 +1,14 @@
 //
-//  _9Tests.swift
-//  29Tests
+//  TwentyNineTests.swift
+//  TwentyNineTests
 //
 //  Created by Tyler J. Otte on 9/25/21.
 //
 
 import XCTest
-@testable import _9
+@testable import TwentyNine
 
-class _9Tests: XCTestCase {
+class TwentyNineTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
