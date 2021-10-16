@@ -25,16 +25,16 @@ internal extension Color {
     //=========================================================================//
     
     /// Scheme colors
-    static let darkGrey: Color = Color(hex: "454545")
-    static let darkRed: Color = Color(hex: "581500")
-    static let green: Color = Color(hex: "006600")
-    static let lightGrey: Color = Color(hex: "808080")
-    static let red: Color = Color(hex: "AF2A00")
-    static let tan: Color = Color(hex: "EFECCA")
+    static let camarone: Color = Color(hex: "006600")
+    static let fire: Color = Color(hex: "AF2A00")
+    static let gray: Color = Color(hex: "808080")
+    static let indianTan: Color = Color(hex: "581500")
+    static let tahunaSands: Color = Color(hex: "EFECCA")
+    static let tundora: Color = Color(hex: "454545")
     
     // Scheme gradients
-    static let redGradient = getGradient(red, darkRed)
-    static let whiteGradient = getGradient(.white, lightGrey)
+    static let redGradient = getGradient(fire, indianTan)
+    static let whiteGradient = getGradient(.white, gray)
     
     //=========================================================================//
     //                              CONSTRUCTORS                               //
