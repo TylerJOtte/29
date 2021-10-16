@@ -29,6 +29,37 @@ final class ModelData: ObservableObject {
     /// The user's `Hand`.
     @Published var hand: CribbageHand = CribbageHand()
     
+    /// The `CardGrid`s for the `Deck`.
+    var deckGrids: [CardGrid] {
+    
+        var grids: [CardGrid] = []
+        
+        if (deck.count >= 4) {
+         
+            for _ in stride(from: 0, to: deck.count - 3, by: 4) {
+            
+                let cards = try! deck.dealCards(4)
+                let heart = cards.first{$0.suit == .hearts}!
+                let club = cards.first{$0.suit == .clubs}!
+                let spade = cards.first{$0.suit == .spades}!
+                let diamond = cards.first{$0.suit == .diamonds}!
+                let buttons = [
+                    CardButton(card: heart),
+                    CardButton(card: club),
+                    CardButton(card: spade),
+                    CardButton(card: diamond)
+                ]
+                let topRow = CardRow(buttons: [buttons[0], buttons[1]])
+                let bottomRow = CardRow(buttons: [buttons[2], buttons[3]])
+                let grid = CardGrid(rows: [topRow, bottomRow])
+                
+                grids.append(grid)
+            }
+        }
+    
+        return grids
+    }
+    
     //=========================================================================//
     //                                 LOADERS                                 //
     //=========================================================================//
