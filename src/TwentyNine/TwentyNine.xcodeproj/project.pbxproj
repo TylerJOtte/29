@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5273DD0271A65C90096A78B /* PegsImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5273DCF271A65C90096A78B /* PegsImage.swift */; };
 		B53D2D3226FFCA2B00069D0A /* TwentyNineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53D2D3126FFCA2B00069D0A /* TwentyNineApp.swift */; };
 		B53D2D3426FFCA2B00069D0A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53D2D3326FFCA2B00069D0A /* ContentView.swift */; };
 		B53D2D3626FFCA2C00069D0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B53D2D3526FFCA2C00069D0A /* Assets.xcassets */; };
@@ -24,7 +25,6 @@
 		B5F6BA94270BD124007A04A0 /* SuitImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA93270BD124007A04A0 /* SuitImage.swift */; };
 		B5F6BA97270BD4E8007A04A0 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA96270BD4E8007A04A0 /* ColorExtension.swift */; };
 		B5F6BA99270BE74B007A04A0 /* PipText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA98270BE74B007A04A0 /* PipText.swift */; };
-		B5F6BAAD270E5F88007A04A0 /* PegsImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BAAC270E5F88007A04A0 /* PegsImage.swift */; };
 		B5F6BAAF270E6B43007A04A0 /* Breakdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BAAE270E6B43007A04A0 /* Breakdown.swift */; };
 		B5F6BAD527135B79007A04A0 /* Forge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50ADA2C2709F83B0038219D /* Forge.framework */; };
 		B5F6BAD627135B79007A04A0 /* Forge.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B50ADA2C2709F83B0038219D /* Forge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -65,6 +65,7 @@
 
 /* Begin PBXFileReference section */
 		B50ADA2C2709F83B0038219D /* Forge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Forge.framework; path = ../../../../Forge.framework; sourceTree = "<group>"; };
+		B5273DCF271A65C90096A78B /* PegsImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PegsImage.swift; sourceTree = "<group>"; };
 		B53D2D2E26FFCA2B00069D0A /* TwentyNine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwentyNine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53D2D3126FFCA2B00069D0A /* TwentyNineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyNineApp.swift; sourceTree = "<group>"; };
 		B53D2D3326FFCA2B00069D0A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,7 +89,6 @@
 		B5F6BA93270BD124007A04A0 /* SuitImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuitImage.swift; sourceTree = "<group>"; };
 		B5F6BA96270BD4E8007A04A0 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		B5F6BA98270BE74B007A04A0 /* PipText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipText.swift; sourceTree = "<group>"; };
-		B5F6BAAC270E5F88007A04A0 /* PegsImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PegsImage.swift; sourceTree = "<group>"; };
 		B5F6BAAE270E6B43007A04A0 /* Breakdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breakdown.swift; sourceTree = "<group>"; };
 		B5F6BADD2717A602007A04A0 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		B5F6BADF2717A8BA007A04A0 /* MessagePaneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePaneButton.swift; sourceTree = "<group>"; };
@@ -126,6 +126,14 @@
 				B50ADA2C2709F83B0038219D /* Forge.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5273DCE271A65B90096A78B /* Pegs */ = {
+			isa = PBXGroup;
+			children = (
+				B5273DCF271A65C90096A78B /* PegsImage.swift */,
+			);
+			path = Pegs;
 			sourceTree = "<group>";
 		};
 		B53D2D2526FFCA2B00069D0A = {
@@ -196,8 +204,8 @@
 				B53D2D3326FFCA2B00069D0A /* ContentView.swift */,
 				B5F6BADC2717A5E5007A04A0 /* MessagePane */,
 				B5F6BAD8271362D5007A04A0 /* Cards */,
+				B5273DCE271A65B90096A78B /* Pegs */,
 				B5F6BA8D270A6276007A04A0 /* DeckView.swift */,
-				B5F6BAAC270E5F88007A04A0 /* PegsImage.swift */,
 				B5F6BAAE270E6B43007A04A0 /* Breakdown.swift */,
 			);
 			path = Views;
@@ -378,6 +386,7 @@
 			files = (
 				B53D2D3E26FFCA2C00069D0A /* TwentyNine.xcdatamodeld in Sources */,
 				B5F6BA97270BD4E8007A04A0 /* ColorExtension.swift in Sources */,
+				B5273DD0271A65C90096A78B /* PegsImage.swift in Sources */,
 				B5F6BA8E270A6276007A04A0 /* DeckView.swift in Sources */,
 				B53D2D3426FFCA2B00069D0A /* ContentView.swift in Sources */,
 				B5F6BA8A270A5053007A04A0 /* CardGrid.swift in Sources */,
@@ -388,7 +397,6 @@
 				B5F6BA99270BE74B007A04A0 /* PipText.swift in Sources */,
 				B5F6BA90270A6606007A04A0 /* MessagePane.swift in Sources */,
 				B5F6BAAF270E6B43007A04A0 /* Breakdown.swift in Sources */,
-				B5F6BAAD270E5F88007A04A0 /* PegsImage.swift in Sources */,
 				B5F6BA94270BD124007A04A0 /* SuitImage.swift in Sources */,
 				B5F6BADE2717A602007A04A0 /* Message.swift in Sources */,
 				B5F6BA88270A45D1007A04A0 /* CardRow.swift in Sources */,
