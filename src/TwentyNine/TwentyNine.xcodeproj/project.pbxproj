@@ -11,10 +11,25 @@
 		B53D2D3426FFCA2B00069D0A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53D2D3326FFCA2B00069D0A /* ContentView.swift */; };
 		B53D2D3626FFCA2C00069D0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B53D2D3526FFCA2C00069D0A /* Assets.xcassets */; };
 		B53D2D3926FFCA2C00069D0A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B53D2D3826FFCA2C00069D0A /* Preview Assets.xcassets */; };
-		B53D2D3B26FFCA2C00069D0A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53D2D3A26FFCA2C00069D0A /* Persistence.swift */; };
 		B53D2D3E26FFCA2C00069D0A /* TwentyNine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B53D2D3C26FFCA2C00069D0A /* TwentyNine.xcdatamodeld */; };
 		B53D2D4926FFCA2C00069D0A /* TwentyNineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53D2D4826FFCA2C00069D0A /* TwentyNineTests.swift */; };
 		B53D2D5426FFCA2C00069D0A /* TwentyNineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53D2D5326FFCA2C00069D0A /* TwentyNineUITests.swift */; };
+		B5F6BA81270A407A007A04A0 /* CardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA80270A407A007A04A0 /* CardButton.swift */; };
+		B5F6BA84270A40C3007A04A0 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA83270A40C3007A04A0 /* ModelData.swift */; };
+		B5F6BA88270A45D1007A04A0 /* CardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA87270A45D1007A04A0 /* CardRow.swift */; };
+		B5F6BA8A270A5053007A04A0 /* CardGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA89270A5053007A04A0 /* CardGrid.swift */; };
+		B5F6BA8C270A5F15007A04A0 /* CardGridRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA8B270A5F15007A04A0 /* CardGridRow.swift */; };
+		B5F6BA8E270A6276007A04A0 /* DeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA8D270A6276007A04A0 /* DeckView.swift */; };
+		B5F6BA90270A6606007A04A0 /* MessagePane.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA8F270A6606007A04A0 /* MessagePane.swift */; };
+		B5F6BA94270BD124007A04A0 /* SuitImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA93270BD124007A04A0 /* SuitImage.swift */; };
+		B5F6BA97270BD4E8007A04A0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA96270BD4E8007A04A0 /* Colors.swift */; };
+		B5F6BA99270BE74B007A04A0 /* PipText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA98270BE74B007A04A0 /* PipText.swift */; };
+		B5F6BAAD270E5F88007A04A0 /* PegsImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BAAC270E5F88007A04A0 /* PegsImage.swift */; };
+		B5F6BAAF270E6B43007A04A0 /* Breakdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BAAE270E6B43007A04A0 /* Breakdown.swift */; };
+		B5F6BAD527135B79007A04A0 /* Forge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50ADA2C2709F83B0038219D /* Forge.framework */; };
+		B5F6BAD627135B79007A04A0 /* Forge.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B50ADA2C2709F83B0038219D /* Forge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B5F6BADE2717A602007A04A0 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BADD2717A602007A04A0 /* Message.swift */; };
+		B5F6BAE02717A8BA007A04A0 /* MessagePaneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BADF2717A8BA007A04A0 /* MessagePaneButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,13 +49,27 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B5F6BAD727135B79007A04A0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B5F6BAD627135B79007A04A0 /* Forge.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B50ADA2C2709F83B0038219D /* Forge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Forge.framework; path = ../../../../Forge.framework; sourceTree = "<group>"; };
 		B53D2D2E26FFCA2B00069D0A /* TwentyNine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwentyNine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53D2D3126FFCA2B00069D0A /* TwentyNineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyNineApp.swift; sourceTree = "<group>"; };
 		B53D2D3326FFCA2B00069D0A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B53D2D3526FFCA2C00069D0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B53D2D3826FFCA2C00069D0A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B53D2D3A26FFCA2C00069D0A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		B53D2D3D26FFCA2C00069D0A /* TwentyNine.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TwentyNine.xcdatamodel; sourceTree = "<group>"; };
 		B53D2D3F26FFCA2C00069D0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B53D2D4426FFCA2C00069D0A /* TwentyNineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwentyNineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +78,20 @@
 		B53D2D4F26FFCA2C00069D0A /* TwentyNineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwentyNineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53D2D5326FFCA2C00069D0A /* TwentyNineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyNineUITests.swift; sourceTree = "<group>"; };
 		B53D2D5526FFCA2C00069D0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5F6BA80270A407A007A04A0 /* CardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardButton.swift; sourceTree = "<group>"; };
+		B5F6BA83270A40C3007A04A0 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		B5F6BA87270A45D1007A04A0 /* CardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRow.swift; sourceTree = "<group>"; };
+		B5F6BA89270A5053007A04A0 /* CardGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGrid.swift; sourceTree = "<group>"; };
+		B5F6BA8B270A5F15007A04A0 /* CardGridRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGridRow.swift; sourceTree = "<group>"; };
+		B5F6BA8D270A6276007A04A0 /* DeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckView.swift; sourceTree = "<group>"; };
+		B5F6BA8F270A6606007A04A0 /* MessagePane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePane.swift; sourceTree = "<group>"; };
+		B5F6BA93270BD124007A04A0 /* SuitImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuitImage.swift; sourceTree = "<group>"; };
+		B5F6BA96270BD4E8007A04A0 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		B5F6BA98270BE74B007A04A0 /* PipText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipText.swift; sourceTree = "<group>"; };
+		B5F6BAAC270E5F88007A04A0 /* PegsImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PegsImage.swift; sourceTree = "<group>"; };
+		B5F6BAAE270E6B43007A04A0 /* Breakdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breakdown.swift; sourceTree = "<group>"; };
+		B5F6BADD2717A602007A04A0 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		B5F6BADF2717A8BA007A04A0 /* MessagePaneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePaneButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F6BAD527135B79007A04A0 /* Forge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +120,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B50ADA2B2709F83B0038219D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B50ADA2C2709F83B0038219D /* Forge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B53D2D2526FFCA2B00069D0A = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +135,7 @@
 				B53D2D4726FFCA2C00069D0A /* TwentyNineTests */,
 				B53D2D5226FFCA2C00069D0A /* TwentyNineUITests */,
 				B53D2D2F26FFCA2B00069D0A /* Products */,
+				B50ADA2B2709F83B0038219D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,9 +153,10 @@
 			isa = PBXGroup;
 			children = (
 				B53D2D3126FFCA2B00069D0A /* TwentyNineApp.swift */,
-				B53D2D3326FFCA2B00069D0A /* ContentView.swift */,
+				B5F6BA95270BD496007A04A0 /* Helpers */,
+				B5F6BA82270A40B7007A04A0 /* Model */,
+				B5F6BA7D270A3D3B007A04A0 /* Views */,
 				B53D2D3526FFCA2C00069D0A /* Assets.xcassets */,
-				B53D2D3A26FFCA2C00069D0A /* Persistence.swift */,
 				B53D2D3F26FFCA2C00069D0A /* Info.plist */,
 				B53D2D3C26FFCA2C00069D0A /* TwentyNine.xcdatamodeld */,
 				B53D2D3726FFCA2C00069D0A /* Preview Content */,
@@ -136,6 +190,58 @@
 			path = TwentyNineUITests;
 			sourceTree = "<group>";
 		};
+		B5F6BA7D270A3D3B007A04A0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B53D2D3326FFCA2B00069D0A /* ContentView.swift */,
+				B5F6BADC2717A5E5007A04A0 /* MessagePane */,
+				B5F6BAD8271362D5007A04A0 /* Cards */,
+				B5F6BA8D270A6276007A04A0 /* DeckView.swift */,
+				B5F6BAAC270E5F88007A04A0 /* PegsImage.swift */,
+				B5F6BAAE270E6B43007A04A0 /* Breakdown.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B5F6BA82270A40B7007A04A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5F6BA83270A40C3007A04A0 /* ModelData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B5F6BA95270BD496007A04A0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B5F6BA96270BD4E8007A04A0 /* Colors.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B5F6BAD8271362D5007A04A0 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				B5F6BA93270BD124007A04A0 /* SuitImage.swift */,
+				B5F6BA98270BE74B007A04A0 /* PipText.swift */,
+				B5F6BA80270A407A007A04A0 /* CardButton.swift */,
+				B5F6BA87270A45D1007A04A0 /* CardRow.swift */,
+				B5F6BA89270A5053007A04A0 /* CardGrid.swift */,
+				B5F6BA8B270A5F15007A04A0 /* CardGridRow.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		B5F6BADC2717A5E5007A04A0 /* MessagePane */ = {
+			isa = PBXGroup;
+			children = (
+				B5F6BADF2717A8BA007A04A0 /* MessagePaneButton.swift */,
+				B5F6BADD2717A602007A04A0 /* Message.swift */,
+				B5F6BA8F270A6606007A04A0 /* MessagePane.swift */,
+			);
+			path = MessagePane;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,12 +252,15 @@
 				B53D2D2A26FFCA2B00069D0A /* Sources */,
 				B53D2D2B26FFCA2B00069D0A /* Frameworks */,
 				B53D2D2C26FFCA2B00069D0A /* Resources */,
+				B5F6BAD727135B79007A04A0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = TwentyNine;
+			packageProductDependencies = (
+			);
 			productName = TwentyNine;
 			productReference = B53D2D2E26FFCA2B00069D0A /* TwentyNine.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +332,8 @@
 				Base,
 			);
 			mainGroup = B53D2D2526FFCA2B00069D0A;
+			packageReferences = (
+			);
 			productRefGroup = B53D2D2F26FFCA2B00069D0A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -266,9 +377,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				B53D2D3E26FFCA2C00069D0A /* TwentyNine.xcdatamodeld in Sources */,
-				B53D2D3B26FFCA2C00069D0A /* Persistence.swift in Sources */,
+				B5F6BA97270BD4E8007A04A0 /* Colors.swift in Sources */,
+				B5F6BA8E270A6276007A04A0 /* DeckView.swift in Sources */,
 				B53D2D3426FFCA2B00069D0A /* ContentView.swift in Sources */,
+				B5F6BA8A270A5053007A04A0 /* CardGrid.swift in Sources */,
 				B53D2D3226FFCA2B00069D0A /* TwentyNineApp.swift in Sources */,
+				B5F6BAE02717A8BA007A04A0 /* MessagePaneButton.swift in Sources */,
+				B5F6BA8C270A5F15007A04A0 /* CardGridRow.swift in Sources */,
+				B5F6BA81270A407A007A04A0 /* CardButton.swift in Sources */,
+				B5F6BA99270BE74B007A04A0 /* PipText.swift in Sources */,
+				B5F6BA90270A6606007A04A0 /* MessagePane.swift in Sources */,
+				B5F6BAAF270E6B43007A04A0 /* Breakdown.swift in Sources */,
+				B5F6BAAD270E5F88007A04A0 /* PegsImage.swift in Sources */,
+				B5F6BA94270BD124007A04A0 /* SuitImage.swift in Sources */,
+				B5F6BADE2717A602007A04A0 /* Message.swift in Sources */,
+				B5F6BA88270A45D1007A04A0 /* CardRow.swift in Sources */,
+				B5F6BA84270A40C3007A04A0 /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,8 +553,19 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TwentyNine/Preview Content\"";
 				DEVELOPMENT_TEAM = WVA79395E7;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+				);
 				INFOPLIST_FILE = TwentyNine/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,8 +586,19 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TwentyNine/Preview Content\"";
 				DEVELOPMENT_TEAM = WVA79395E7;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+				);
 				INFOPLIST_FILE = TwentyNine/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
