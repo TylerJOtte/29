@@ -1,9 +1,9 @@
 //=============================================================================//
 //                                                                             //
-//  PegsImageRow.swift                                                         //
+//  HandView.swift                                                             //
 //  29                                                                         //
 //                                                                             //
-//  Created by Tyler J. Otte on 10/16/21.                                      //
+//  Created by Tyler J. Otte on 10/03/21.                                      //
 //-----------------------------------------------------------------------------//
 //                                                                             //
 // This source file is part of the 29 project.                                 //
@@ -15,34 +15,47 @@
 //=============================================================================//
 
 import SwiftUI
+import Forge
 
-/// A `CardGridRow` surrounded by `PegsImage`s.
-struct PegsImageRow: View {
+/// A `CribbageHand` selection `View`.
+struct HandView: View {
 
-    /// The number of `CardGrid`s to display.
-    var grids: Int = 2
-    
-    /// The size to constrain by.
-    var size = UIScreen.main.bounds.size
-    
-    /// The content to display
+    /// The content to display.
     var body: some View {
+        GeometryReader { geometry in
 
-        HStack(spacing: 0) {
-            PegsImage()
-            CardGridRow(grids: 2)
-                .frame(width: size.width * 0.5)
-            PegsImage()
+            let width = geometry.size.width
+            let isPortrait = geometry.size.height > width
+            let messagePaneRowGrids = isPortrait ? 3 : 6
+            let nextRowGrids = isPortrait ? 4 : 7
+
+            VStack(spacing: 0) {
+                MessagePaneRow(grids: messagePaneRowGrids, width: width)
+                CardGridRow(grids: nextRowGrids)
+
+                if (isPortrait) {
+
+                    CardGridRow()
+                    PegsImageRow(width: width)
+                }
+            }
         }
     }
 }
 
-/// The `PegsImageRow`'s preview configuration.
-struct PegsImageRow_Previews: PreviewProvider {
+/// The `DeckView`'s preview configuration.
+struct DeckView_Previews: PreviewProvider {
     
     /// The content to display.
     static var previews: some View {
-        PegsImageRow()
+        Group {
+//            DeckView()
+//                .environmentObject(ModelData())
+            
+        HandView()
+            .previewInterfaceOrientation(.landscapeLeft)
             .environmentObject(ModelData())
+        }
+        
     }
 }

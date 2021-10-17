@@ -31,7 +31,7 @@
 		B5F6BADE2717A602007A04A0 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BADD2717A602007A04A0 /* Message.swift */; };
 		B5F6BAE02717A8BA007A04A0 /* MessagePaneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BADF2717A8BA007A04A0 /* MessagePaneButton.swift */; };
 		B5FDADB1271B6E8900864F69 /* PegsImageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FDADB0271B6E8900864F69 /* PegsImageRow.swift */; };
-		B5FDADB4271B6F6000864F69 /* DeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FDADB3271B6F6000864F69 /* DeckView.swift */; };
+		B5FDADB4271B6F6000864F69 /* HandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FDADB3271B6F6000864F69 /* HandView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,7 +95,7 @@
 		B5F6BADD2717A602007A04A0 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		B5F6BADF2717A8BA007A04A0 /* MessagePaneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePaneButton.swift; sourceTree = "<group>"; };
 		B5FDADB0271B6E8900864F69 /* PegsImageRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PegsImageRow.swift; sourceTree = "<group>"; };
-		B5FDADB3271B6F6000864F69 /* DeckView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckView.swift; sourceTree = "<group>"; };
+		B5FDADB3271B6F6000864F69 /* HandView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,7 +267,7 @@
 		B5FDADB2271B6F6000864F69 /* Hands */ = {
 			isa = PBXGroup;
 			children = (
-				B5FDADB3271B6F6000864F69 /* DeckView.swift */,
+				B5FDADB3271B6F6000864F69 /* HandView.swift */,
 			);
 			path = Hands;
 			sourceTree = "<group>";
@@ -411,7 +411,7 @@
 				B5F6BA97270BD4E8007A04A0 /* ColorExtension.swift in Sources */,
 				B5273DD0271A65C90096A78B /* PegsImage.swift in Sources */,
 				B53D2D3426FFCA2B00069D0A /* ContentView.swift in Sources */,
-				B5FDADB4271B6F6000864F69 /* DeckView.swift in Sources */,
+				B5FDADB4271B6F6000864F69 /* HandView.swift in Sources */,
 				B5F6BA8A270A5053007A04A0 /* CardGrid.swift in Sources */,
 				B53D2D3226FFCA2B00069D0A /* TwentyNineApp.swift in Sources */,
 				B5F6BAE02717A8BA007A04A0 /* MessagePaneButton.swift in Sources */,
