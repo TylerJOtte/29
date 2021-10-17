@@ -21,10 +21,10 @@ struct PegsImage: View {
 
     /// The content to display
     var body: some View {
+    
         Image("Pegs")
             .resizable()
             .border(Color.black, width: 0.5)
-        
     }
 }
 

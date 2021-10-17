@@ -1,9 +1,9 @@
 //=============================================================================//
 //                                                                             //
-//  CardGridRow.swift                                                          //
+//  PegsImageRow.swift                                                         //
 //  29                                                                         //
 //                                                                             //
-//  Created by Tyler J. Otte on 10/03/21.                                      //
+//  Created by Tyler J. Otte on 10/16/21.                                      //
 //-----------------------------------------------------------------------------//
 //                                                                             //
 // This source file is part of the 29 project.                                 //
@@ -15,33 +15,34 @@
 //=============================================================================//
 
 import SwiftUI
-import Forge
 
-/// A row of `PlayingCard` grids.
-struct CardGridRow: View {
-
-    /// The models' current data.
-    @EnvironmentObject var modelData: ModelData
+/// A `CardGridRow` surrounded by `PegsImage`s.
+struct PegsImageRow: View {
     
     /// The number of `CardGrid`s to display.
-    var grids: Int = 4
-
-    /// The content to display.
+    var grids: Int = 2
+    
+    /// The content to display
     var body: some View {
-        HStack(spacing: 0) {
-            ForEach(0..<grids) { _ in
-                modelData.getNextGrid()
+        
+        GeometryReader { geometry in
+            
+            HStack(spacing: 0) {
+                PegsImage()
+                CardGridRow(grids: 2)
+                    .frame(width: geometry.size.width * 0.5)
+                PegsImage()
             }
         }
     }
 }
 
-/// The `CardGridRow`'s preview configuration.
-struct CardGridRow_Previews: PreviewProvider {
+/// The `PegsImageRow`'s preview configuration.
+struct PegsImageRow_Previews: PreviewProvider {
     
     /// The content to display.
     static var previews: some View {
-        CardGridRow()
+        PegsImageRow()
             .environmentObject(ModelData())
     }
 }
