@@ -29,6 +29,7 @@ struct MessagePane: View {
         modelData.hand.isFull() ? "\(modelData.hand.count)" : "Select hand"
     }
     
+    /// True if show action `Button`s, else false.
     @State private var showButtons = false
     
     /// The content to display.
@@ -41,9 +42,9 @@ struct MessagePane: View {
             Spacer()
             MessagePaneButton(title: "Breakdown")
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.redGradient)
         .border(Color.white, width: 0.5)
+        .clipped()
     }
 }
 

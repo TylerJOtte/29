@@ -1,9 +1,9 @@
 //=============================================================================//
 //                                                                             //
-//  MessagePaneButton.swift                                                    //
+//  MessagePaneRow.swift                                                       //
 //  29                                                                         //
 //                                                                             //
-//  Created by Tyler J. Otte on 10/13/21.                                      //
+//  Created by Tyler J. Otte on 10/16/21.                                      //
 //-----------------------------------------------------------------------------//
 //                                                                             //
 // This source file is part of the 29 project.                                 //
@@ -14,34 +14,37 @@
 // See https://github.com/TylerJOtte/29/LICENSE.txt for more details.          //
 //=============================================================================//
 
+
 import SwiftUI
 
-/// An action button for the `MessagePane`.
-struct MessagePaneButton: View {
+/// A `CardGridRow` preceeded by a `MessagePane.`
+struct MessagePaneRow: View {
     
-    // The button's title to display.
-    var title: String
+    /// The number of `CardGrid`s to display.
+    var grids: Int = 3
+    
+    /// The size to constrain by.
+    var size = UIScreen.main.bounds.size
     
     /// The content to display.
     var body: some View {
-        Button(title, action: {
-            
-        })
-        .padding(.all, 5)
-        .frame(maxWidth: .infinity)
-        .background(Color.whiteGradient)
-        .foregroundColor(.black)
-        .font(.system(.caption, design: .serif))
-        .border(Color.white, width: 0.5)
-        .shadow(radius: 5, x: 5, y: 15)
+        
+        HStack(spacing: 0) {
+            MessagePane()
+                .frame(maxWidth:  size.width / (CGFloat(grids) + 1))
+            CardGridRow(grids: grids)
+
+        }
     }
 }
 
-/// The `MessagePaneButton`'s preview configuration.
-struct MessagePaneButton_Previews: PreviewProvider {
+/// The `MessagePaneRow`'s preview configuration.
+struct MessagePaneRow_Previews: PreviewProvider {
     
     /// The content to display.
     static var previews: some View {
-        MessagePaneButton(title: "New Hand")
+        MessagePaneRow()
+            .environmentObject(ModelData())
+        
     }
 }
