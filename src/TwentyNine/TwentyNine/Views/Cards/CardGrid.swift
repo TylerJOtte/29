@@ -23,6 +23,18 @@ struct CardGrid: View {
     /// The `CardRow`s to display.
     var rows: [CardRow]
     
+    /// The first `CardButton`'s `PlayingCard`.
+    private var firstCard: PlayingCard? {
+    
+        rows.first?.buttons.first?.card
+    }
+    
+    /// The `PlayingCardRank` for all contained `CardButtons`.
+    internal var rank: Rank? {
+        
+        firstCard?.rank
+    }
+    
     /// The content to display.
     var body: some View {
         ZStack {
@@ -32,18 +44,22 @@ struct CardGrid: View {
                 }
             }
             
-            PipText(pip: rows.first?.buttons.first?.card.pip ?? "")
+            PipText(pip: firstCard?.pip ?? "")
+                .scaleEffect(0.55)
+                .scaledToFit()
         }
-        .border(Color.black, width: 0.5) 
+        .border(Color.black, width: 0.5)
     }
 }
 
 /// The `CardGrid`'s preview configuration.
 struct CardGrid_Previews: PreviewProvider {
 
+    static var modelData: ModelData = ModelData()
+    
     /// The `CardButton`s to display.
-    static var buttons = try! ModelData().deck
-        .dealCards(4)
+    static var buttons = try! modelData.deck
+        .getNextCard(4)
         .map{ CardButton(card: $0)}
     
     /// The content to display.
@@ -52,5 +68,6 @@ struct CardGrid_Previews: PreviewProvider {
             CardRow(buttons: [buttons[0], buttons[1]]),
             CardRow(buttons: [buttons[2], buttons[3]])
         ])
+        .environmentObject(modelData)
     }
 }

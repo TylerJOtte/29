@@ -25,11 +25,20 @@ struct PipText: View, Hashable {
     
     // The content to display.
     var body: some View {
+        GeometryReader { geometry in
             Text(pip)
-                .font(.system(size: 55, design: .serif))
+                .font(.system(size: 1000, design: .serif))
                 .foregroundColor(Color.white)
                 .shadow(radius: 5, x: 5, y: 15)
-
+                .minimumScaleFactor(0.1)
+                .frame(
+                    minWidth: 0,
+                    maxWidth: geometry.size.width,
+                    minHeight: 0,
+                    maxHeight: geometry.size.height,
+                    alignment: .center
+                )
+        }
     }
 }
 
@@ -38,6 +47,6 @@ struct Pip_Previews: PreviewProvider {
     
     /// The content to display.
     static var previews: some View {
-        PipText(pip: try! ModelData().deck.dealCard().pip)
+        PipText(pip: try! ModelData().deck.getNextCard().pip)
     }
 }
