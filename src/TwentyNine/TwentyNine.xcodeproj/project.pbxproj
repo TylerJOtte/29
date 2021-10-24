@@ -18,8 +18,8 @@
 		B585A34D271BD18200D3D0A3 /* Breakdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = B585A34C271BD18200D3D0A3 /* Breakdown.swift */; };
 		B59CDA70271B5C9D0020EBEC /* MessagePaneRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59CDA6F271B5C9D0020EBEC /* MessagePaneRow.swift */; };
 		B5C9B08F2724BDB9007A211B /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9B08E2724BDB9007A211B /* CollectionExtension.swift */; };
-		B5C9B0932724DFD4007A211B /* Forge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50ADA2C2709F83B0038219D /* Forge.framework */; platformFilter = ios; };
-		B5C9B0942724DFD4007A211B /* Forge.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B50ADA2C2709F83B0038219D /* Forge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B5C9B0992724F90D007A211B /* Forge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50ADA2C2709F83B0038219D /* Forge.framework */; platformFilter = ios; };
+		B5C9B09A2724F90D007A211B /* Forge.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B50ADA2C2709F83B0038219D /* Forge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5F6BA81270A407A007A04A0 /* CardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA80270A407A007A04A0 /* CardButton.swift */; };
 		B5F6BA84270A40C3007A04A0 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA83270A40C3007A04A0 /* ModelData.swift */; };
 		B5F6BA88270A45D1007A04A0 /* CardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA87270A45D1007A04A0 /* CardRow.swift */; };
@@ -53,13 +53,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B5C9B0952724DFD4007A211B /* Embed Frameworks */ = {
+		B5C9B09B2724F90D007A211B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B5C9B0942724DFD4007A211B /* Forge.framework in Embed Frameworks */,
+				B5C9B09A2724F90D007A211B /* Forge.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,7 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5C9B0932724DFD4007A211B /* Forge.framework in Frameworks */,
+				B5C9B0992724F90D007A211B /* Forge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +285,7 @@
 				B53D2D2A26FFCA2B00069D0A /* Sources */,
 				B53D2D2B26FFCA2B00069D0A /* Frameworks */,
 				B53D2D2C26FFCA2B00069D0A /* Resources */,
-				B5C9B0952724DFD4007A211B /* Embed Frameworks */,
+				B5C9B09B2724F90D007A211B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -604,6 +604,8 @@
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
 				);
 				INFOPLIST_FILE = TwentyNine/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -629,6 +631,8 @@
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
