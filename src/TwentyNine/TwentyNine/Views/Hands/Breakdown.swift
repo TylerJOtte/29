@@ -1,9 +1,9 @@
 //=============================================================================//
 //                                                                             //
-//  TwentyNineApp.swift                                                        //
+//  Breakdown.swift                                                            //
 //  29                                                                         //
 //                                                                             //
-//  Created by Tyler J. Otte on 9/25/21.                                       //
+//  Created by Tyler J. Otte on 10/23/21.                                      //
 //-----------------------------------------------------------------------------//
 //                                                                             //
 // This source file is part of the 29 project.                                 //
@@ -14,24 +14,37 @@
 // See https://github.com/TylerJOtte/29/LICENSE.txt for more details.          //
 //=============================================================================//
 
-
 import SwiftUI
+import Forge
 
-/// The application's main entry point.
-@main
-struct TwentyNineApp: App {
-
-    //=========================================================================//
-    //                                ATTRIBUTES                               //
-    //=========================================================================//
+/// A `CribbageHand`s `HandRankScore` breakdown.
+struct Breakdown: View {
     
-    /// The models' current data.
-    @StateObject private var modelData: ModelData = ModelData()
+    /// The model's current data.
+    @EnvironmentObject var modelData: ModelData
     
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-                .environmentObject(modelData)
+    /// The content to display.
+    var body: some View {
+        ScrollView {
+            VStack {
+                Text("")
+                
+            }
         }
+        .frame(maxWidth: .infinity)
+        .background(Color.redGradient)
+        .clipped()
+        .navigationTitle("Breakdown")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+/// The `HandBreakdown`'s preview configuration.
+struct Breakdown_Previews: PreviewProvider {
+    
+    /// The content to display.
+    static var previews: some View {
+        Breakdown()
+            .environmentObject(ModelData())
     }
 }
