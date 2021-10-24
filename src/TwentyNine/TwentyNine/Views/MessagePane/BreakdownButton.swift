@@ -1,9 +1,9 @@
 //=============================================================================//
 //                                                                             //
-//  MessagePaneButton.swift                                                    //
+//  BreakdownButton.swift                                                      //
 //  29                                                                         //
 //                                                                             //
-//  Created by Tyler J. Otte on 10/13/21.                                      //
+//  Created by Tyler J. Otte on 10/23/21.                                      //
 //-----------------------------------------------------------------------------//
 //                                                                             //
 // This source file is part of the 29 project.                                 //
@@ -16,35 +16,25 @@
 
 import SwiftUI
 
-/// An action button for the `MessagePane`.
-struct MessagePaneButton: View {
+/// A `Button` for navigating to the `Breakdown` view.
+struct BreakdownButton: View {
     
-    /// The models' current data.
-    @EnvironmentObject var modelData: ModelData
-    
-    // The button's title to display.
-    var title: String
-
+    /// True fi the `BreakdownButton` is active, else false.
+    @State private var isActive = false
+        
     /// The content to display.
     var body: some View {
-        Text(title)
-        .padding(.all, 5)
-        .frame(maxWidth: .infinity)
-        .background(Color.whiteGradient)
-        .foregroundColor(.black)
-        .font(.system(.caption, design: .serif))
-        .border(Color.white, width: 0.5)
-        .shadow(radius: 5, x: 5, y: 15)
-        .opacity(modelData.hand.isFull() ? 1 : 0)
+        NavigationLink(destination: Breakdown()) {
+            MessagePaneButton(title: "Breakdown")
+        }
     }
 }
 
-/// The `MessagePaneButton`'s preview configuration.
-struct MessagePaneButton_Previews: PreviewProvider {
+/// The `BreakdownButton`'s preview configuration.
+struct BreakdownButton_Previews: PreviewProvider {
     
     /// The content to display.
     static var previews: some View {
-        MessagePaneButton(title: "New Hand")
-            .environmentObject(ModelData())
+        BreakdownButton()
     }
 }
