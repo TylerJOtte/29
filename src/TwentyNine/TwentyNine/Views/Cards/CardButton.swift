@@ -20,6 +20,9 @@ import Forge
 /// A `PlayingCard Button`.
 struct CardButton: View {
 
+    /// The models' current data.
+    @EnvironmentObject var modelData: ModelData
+    
     /// The `Button`'s `PlayingCard`.
     var card: PlayingCard
 
@@ -28,9 +31,27 @@ struct CardButton: View {
     
     /// The content to display.
     var body: some View {
-        
         Button(action: {
-            self.isSelected.toggle()
+            
+            if (!isSelected && !modelData.hand.isFull()) {
+                
+                _ = try! modelData.deck.remove(card)
+                try! modelData.hand.add(card)
+                self.isSelected.toggle()
+                modelData.register = "Hi"
+               
+            } else if (isSelected) {
+                
+                _ = try! modelData.hand.remove(card)
+                try! modelData.deck.add(card)
+                self.isSelected.toggle()
+                modelData.register = "Bye"
+                
+            } else {
+            
+                
+            }
+            
         }) {
             Rectangle()
                 .fill(isSelected ? Color.tahunaSands : .camarone)
@@ -38,15 +59,19 @@ struct CardButton: View {
                 .border(isSelected ? Color.fire : .tundora,
                         width: isSelected ? 2 : 0.2)
                 .overlay(SuitImage(suit: card.suit))
-        }
+    }
     }
 }
 
 /// The `CardButton`'s preview configuration.
 struct CardButton_Previews: PreviewProvider {
     
+    /// The model's current data.
+    static var modelData: ModelData = ModelData()
+    
     /// The content to display.
     static var previews: some View {
-        CardButton(card: try! ModelData().deck.dealCard())
+        CardButton(card: try! modelData.deck.getNextCard())
+            .environmentObject(modelData)
     }
 }

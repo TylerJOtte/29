@@ -15,24 +15,27 @@
 //=============================================================================//
 
 import SwiftUI
+import Forge
 
 /// A `CardGridRow` surrounded by `PegsImage`s.
 struct PegsImageRow: View {
 
-    /// The number of `CardGrid`s to display.
-    var grids: Int = 2
+    /// The models' current data.
+    @EnvironmentObject var modelData: ModelData
     
-    /// The size to constrain by.
-    var size = UIScreen.main.bounds.size
+    /// The number of `CardGrid`s to display.
+    var cardGridRow: CardGridRow
     
     /// The content to display
     var body: some View {
 
-        HStack(spacing: 0) {
-            PegsImage()
-            CardGridRow(grids: 2)
-                .frame(width: size.width * 0.5)
-            PegsImage()
+        GeometryReader { geometry in
+            HStack(spacing: 0) {
+                PegsImage()
+                cardGridRow
+                    .frame(width: geometry.size.width * 0.5)
+                PegsImage()
+            }
         }
     }
 }
@@ -40,9 +43,16 @@ struct PegsImageRow: View {
 /// The `PegsImageRow`'s preview configuration.
 struct PegsImageRow_Previews: PreviewProvider {
     
+//    static let parentWidth = UIScreen.main.bounds.size.width
+    static let modelData = ModelData()
+    static let startRank = Rank.queen
+    static let endRank = Rank.king
+    static let cardGrids = modelData.getCardGrids(from: startRank, to: endRank)
+    static let cardGridRow = CardGridRow(cardGrids: cardGrids)
+    
     /// The content to display.
     static var previews: some View {
-        PegsImageRow()
-            .environmentObject(ModelData())
+        PegsImageRow(cardGridRow: cardGridRow)
+            .environmentObject(modelData)
     }
 }

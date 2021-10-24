@@ -23,12 +23,6 @@ struct MessagePane: View {
     /// The models' current data.
     @EnvironmentObject var modelData: ModelData
     
-    /// The text to display in message pane.
-    private var messageText: String {
-        
-        modelData.hand.isFull() ? "\(modelData.hand.count)" : "Select hand"
-    }
-    
     /// True if show action `Button`s, else false.
     @State private var showButtons = false
     
@@ -38,12 +32,12 @@ struct MessagePane: View {
         VStack {
             MessagePaneButton(title: "New Hand")
             Spacer()
-            Message(text: messageText)
+            Message(text: modelData.hand.isFull() ? "29" : "Select hand")
             Spacer()
             MessagePaneButton(title: "Breakdown")
         }
         .background(Color.redGradient)
-        .border(Color.white, width: 0.5)
+        .border(Color.black, width: 0.5)
         .clipped()
     }
 }

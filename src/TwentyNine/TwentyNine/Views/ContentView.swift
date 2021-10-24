@@ -15,13 +15,16 @@
 //=============================================================================//
 
 import SwiftUI
+import Forge
 
 /// The top-level `View` in the `View` hierarchy.
 struct ContentView: View {
     
+    /// The models' current data.
+    @EnvironmentObject var modelData: ModelData
+
     /// The content to display
     var body: some View {
-        
         HandView()
     }
 }

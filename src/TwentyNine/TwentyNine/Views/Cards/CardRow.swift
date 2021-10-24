@@ -36,13 +36,16 @@ struct CardRow: View {
 /// The `CardRow`'s preview configuration.
 struct CardRow_Previews: PreviewProvider {
     
+    static var modelData: ModelData = ModelData()
+    
     /// The `CardButton`s to display.
-    static var buttons = try! ModelData().deck
-        .dealCards(2)
+    static var buttons = try! modelData.deck
+        .getNextCard(2)
         .map{ CardButton(card: $0)}
     
     /// The content to display.
     static var previews: some View {
         CardRow(buttons: buttons)
+            .environmentObject(ModelData())
     }
 }

@@ -19,9 +19,12 @@ import SwiftUI
 /// An action button for the `MessagePane`.
 struct MessagePaneButton: View {
     
+    /// The models' current data.
+    @EnvironmentObject var modelData: ModelData
+    
     // The button's title to display.
     var title: String
-    
+
     /// The content to display.
     var body: some View {
         Button(title, action: {
@@ -34,6 +37,7 @@ struct MessagePaneButton: View {
         .font(.system(.caption, design: .serif))
         .border(Color.white, width: 0.5)
         .shadow(radius: 5, x: 5, y: 15)
+        .opacity(modelData.hand.isFull() ? 1 : 0)
     }
 }
 
@@ -43,5 +47,6 @@ struct MessagePaneButton_Previews: PreviewProvider {
     /// The content to display.
     static var previews: some View {
         MessagePaneButton(title: "New Hand")
+            .environmentObject(ModelData())
     }
 }

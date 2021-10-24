@@ -16,24 +16,31 @@
 
 
 import SwiftUI
+import Forge
 
 /// A `CardGridRow` preceeded by a `MessagePane.`
 struct MessagePaneRow: View {
-    
+
+    /// The model's current data.
+    @EnvironmentObject var modelData: ModelData
+
     /// The number of `CardGrid`s to display.
-    var grids: Int = 3
+    var cardGridRow: CardGridRow
     
-    /// The size to constrain by.
-    var size = UIScreen.main.bounds.size
+    /// The total # of `CardGrids` and other items.
+    private var totalItems: Int {
+        
+        cardGridRow.cardGrids.count + 1 // +1 for MessagePane
+    }
     
     /// The content to display.
     var body: some View {
-        
-        HStack(spacing: 0) {
-            MessagePane()
-                .frame(maxWidth:  size.width / (CGFloat(grids) + 1))
-            CardGridRow(grids: grids)
-
+        GeometryReader { geometry in
+            HStack(spacing: 0) {
+                MessagePane()
+                    .frame(width: geometry.size.width / CGFloat(totalItems))
+                cardGridRow
+            }
         }
     }
 }
@@ -41,10 +48,18 @@ struct MessagePaneRow: View {
 /// The `MessagePaneRow`'s preview configuration.
 struct MessagePaneRow_Previews: PreviewProvider {
     
+    /// The model's current data.
+    static let modelData = ModelData()
+    
+    /// The `CardGridRow` to display.
+    static let startRank = Rank.ace
+    static let endRank = Rank.three
+    static let cardGrids = modelData.getCardGrids(from: startRank, to: endRank)
+    static let cardGridRow = CardGridRow(cardGrids: cardGrids)
+    
     /// The content to display.
     static var previews: some View {
-        MessagePaneRow()
-            .environmentObject(ModelData())
-        
+        MessagePaneRow(cardGridRow: cardGridRow)
+            .environmentObject(modelData)
     }
 }

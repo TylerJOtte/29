@@ -1,9 +1,9 @@
 //=============================================================================//
 //                                                                             //
-//  CardGridRow.swift                                                          //
+//  CollectionExtension.swift                                                  //
 //  29                                                                         //
 //                                                                             //
-//  Created by Tyler J. Otte on 10/03/21.                                      //
+//  Created by Tyler J. Otte on 10/23/21.                                      //
 //-----------------------------------------------------------------------------//
 //                                                                             //
 // This source file is part of the 29 project.                                 //
@@ -14,37 +14,20 @@
 // See https://github.com/TylerJOtte/29/LICENSE.txt for more details.          //
 //=============================================================================//
 
-import SwiftUI
+import Foundation
 import Forge
 
-/// A row of `PlayingCard` grids.
-struct CardGridRow: View {
-
-    /// The models' current data.
-    @EnvironmentObject var modelData: ModelData
+/// An extension for a `CardGrid Collection`.
+internal extension Collection where Element == CardGrid {
     
-    /// The `CardGrid`s to display in the row.
-    var cardGrids: [CardGrid]
-
-    /// The content to display.
-    var body: some View {
-        HStack(spacing: 0) {
-            ForEach(0..<cardGrids.count) { cardGrid in
-                cardGrids[cardGrid]
-            }
-        }
-    }
-}
-
-/// The `CardGridRow`'s preview configuration.
-struct CardGridRow_Previews: PreviewProvider {
-    
-    /// The model's current data.
-    static let modelData = ModelData()
-    
-    /// The content to display.
-    static var previews: some View {
-        CardGridRow(cardGrids: modelData.getCardGrids(from: .ace, to: .three))
-            .environmentObject(modelData)
+    /// Determines if the `Collection` contains a `CardGrid` with the given `Rank`.
+    ///
+    /// - Precondition: None.
+    /// - Postcondition: None.
+    /// - Parameter rank: The `Rank` of the `CardGrid` to search for.
+    /// - Returns: True if contains a `CardGrid` with the given `Rank`, else false.
+    func contains(_ rank: Rank) -> Bool {
+        
+        return contains(where: {$0.rank == rank})
     }
 }

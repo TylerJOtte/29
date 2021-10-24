@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,9 @@
 		B53D2D5426FFCA2C00069D0A /* TwentyNineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53D2D5326FFCA2C00069D0A /* TwentyNineUITests.swift */; };
 		B585A34D271BD18200D3D0A3 /* Breakdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = B585A34C271BD18200D3D0A3 /* Breakdown.swift */; };
 		B59CDA70271B5C9D0020EBEC /* MessagePaneRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59CDA6F271B5C9D0020EBEC /* MessagePaneRow.swift */; };
+		B5C9B08F2724BDB9007A211B /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9B08E2724BDB9007A211B /* CollectionExtension.swift */; };
+		B5C9B0932724DFD4007A211B /* Forge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50ADA2C2709F83B0038219D /* Forge.framework */; platformFilter = ios; };
+		B5C9B0942724DFD4007A211B /* Forge.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B50ADA2C2709F83B0038219D /* Forge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5F6BA81270A407A007A04A0 /* CardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA80270A407A007A04A0 /* CardButton.swift */; };
 		B5F6BA84270A40C3007A04A0 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA83270A40C3007A04A0 /* ModelData.swift */; };
 		B5F6BA88270A45D1007A04A0 /* CardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA87270A45D1007A04A0 /* CardRow.swift */; };
@@ -26,8 +29,6 @@
 		B5F6BA94270BD124007A04A0 /* SuitImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA93270BD124007A04A0 /* SuitImage.swift */; };
 		B5F6BA97270BD4E8007A04A0 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA96270BD4E8007A04A0 /* ColorExtension.swift */; };
 		B5F6BA99270BE74B007A04A0 /* PipText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA98270BE74B007A04A0 /* PipText.swift */; };
-		B5F6BAD527135B79007A04A0 /* Forge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50ADA2C2709F83B0038219D /* Forge.framework */; };
-		B5F6BAD627135B79007A04A0 /* Forge.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B50ADA2C2709F83B0038219D /* Forge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5F6BADE2717A602007A04A0 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BADD2717A602007A04A0 /* Message.swift */; };
 		B5F6BAE02717A8BA007A04A0 /* MessagePaneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BADF2717A8BA007A04A0 /* MessagePaneButton.swift */; };
 		B5FDADB1271B6E8900864F69 /* PegsImageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FDADB0271B6E8900864F69 /* PegsImageRow.swift */; };
@@ -52,13 +53,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B5F6BAD727135B79007A04A0 /* Embed Frameworks */ = {
+		B5C9B0952724DFD4007A211B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B5F6BAD627135B79007A04A0 /* Forge.framework in Embed Frameworks */,
+				B5C9B0942724DFD4007A211B /* Forge.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,6 +84,7 @@
 		B53D2D5526FFCA2C00069D0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B585A34C271BD18200D3D0A3 /* Breakdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breakdown.swift; sourceTree = "<group>"; };
 		B59CDA6F271B5C9D0020EBEC /* MessagePaneRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagePaneRow.swift; sourceTree = "<group>"; };
+		B5C9B08E2724BDB9007A211B /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
 		B5F6BA80270A407A007A04A0 /* CardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardButton.swift; sourceTree = "<group>"; };
 		B5F6BA83270A40C3007A04A0 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		B5F6BA87270A45D1007A04A0 /* CardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRow.swift; sourceTree = "<group>"; };
@@ -103,7 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5F6BAD527135B79007A04A0 /* Forge.framework in Frameworks */,
+				B5C9B0932724DFD4007A211B /* Forge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				B5F6BA96270BD4E8007A04A0 /* ColorExtension.swift */,
+				B5C9B08E2724BDB9007A211B /* CollectionExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -282,7 +285,7 @@
 				B53D2D2A26FFCA2B00069D0A /* Sources */,
 				B53D2D2B26FFCA2B00069D0A /* Frameworks */,
 				B53D2D2C26FFCA2B00069D0A /* Resources */,
-				B5F6BAD727135B79007A04A0 /* Embed Frameworks */,
+				B5C9B0952724DFD4007A211B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -424,6 +427,7 @@
 				B5F6BA94270BD124007A04A0 /* SuitImage.swift in Sources */,
 				B5F6BADE2717A602007A04A0 /* Message.swift in Sources */,
 				B5F6BA88270A45D1007A04A0 /* CardRow.swift in Sources */,
+				B5C9B08F2724BDB9007A211B /* CollectionExtension.swift in Sources */,
 				B5F6BA84270A40C3007A04A0 /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -595,6 +599,11 @@
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
 				);
 				INFOPLIST_FILE = TwentyNine/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -620,6 +629,11 @@
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",

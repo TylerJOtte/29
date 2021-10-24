@@ -25,12 +25,12 @@ struct TwentyNineApp: App {
     //                                ATTRIBUTES                               //
     //=========================================================================//
     
+    /// The models' current data.
     @StateObject private var modelData: ModelData = ModelData()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(modelData)
         }
     }
 }
