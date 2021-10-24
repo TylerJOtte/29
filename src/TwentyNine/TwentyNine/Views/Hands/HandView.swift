@@ -31,15 +31,19 @@ struct HandView: View {
             let width = size.width
             let isPortrait = size.height > width
   
-            VStack(spacing: 0) {
-                MessagePaneRow(cardGridRow: getRow1CardGridRow(isPortrait))
-                CardGridRow(cardGrids: getRow2CardGrids(isPortrait))
+            NavigationView {
+                VStack(spacing: 0) {
+                    MessagePaneRow(cardGridRow: getRow1CardGridRow(isPortrait))
+                    CardGridRow(cardGrids: getRow2CardGrids(isPortrait))
 
-                if (isPortrait) {
+                    if (isPortrait) {
 
-                    CardGridRow(cardGrids: getRow3CardGrids())
-                    PegsImageRow(cardGridRow: getRow4CardGridRow())
+                        CardGridRow(cardGrids: getRow3CardGrids())
+                        PegsImageRow(cardGridRow: getRow4CardGridRow())
+                    }
                 }
+                .navigationBarHidden(true)
+                .navigationTitle("Hand")
             }
         }
     }
