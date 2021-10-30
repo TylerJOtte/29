@@ -1,6 +1,6 @@
 //=============================================================================//
 //                                                                             //
-//  BreakdownTitle.swift                                                       //
+//  HandRankHeader.swift                                                       //
 //  29                                                                         //
 //                                                                             //
 //  Created by Tyler J. Otte on 10/27/21.                                      //
@@ -15,30 +15,42 @@
 //=============================================================================//
 
 import SwiftUI
+import Forge
 
+/// A `HandRank Breakdown`'s header.
+struct HandRankHeader: View {
 
-struct BreakdownTitle: View {
+    /// The `HandRankTitle` to display.
+    var handRankTitle: HandRankTitle
+
+    /// The `HandRankPoints` to display.
+    var handRankPoints: HandRankPoints
+
+    /// The parent container's size/coordinate proxy to adjust for.
+    var geo: GeometryProxy
+    
+    /// The content to display.
     var body: some View {
         HStack(spacing: 0) {
-            Text("\(title)\(plural)")
-                .frame(width: geometry.size.width * 0.63)
-                .padding(.leading, geometry.size.width * 0.18)
-                .padding(.vertical)
-                .background(Color.black)
-            Text("+ \(handRanks.totalPoints)")
-                .frame(maxWidth: .infinity)
-                .padding()
-                .background(Color.redGradient)
-                .border(width: 1, edges: [.leading], color: .white)
+            handRankTitle
+                .frame(maxWidth: geo.size.width * 0.90)
+            handRankPoints
+                .frame(maxWidth: geo.size.width * 0.20)
         }
-        .font(.system(.title2, design: .serif))
-        .foregroundColor(Color(hex: "FEFEFE"))
-        .border(Color.white, width: 1)
     }
 }
 
-struct BreakdownTitle_Previews: PreviewProvider {
+/// The `HandRankHeader`'s preview configuration.
+struct HandRankHeader_Previews: PreviewProvider {
+    
+    /// The content to display.
     static var previews: some View {
-        BreakdownTitle()
+        GeometryReader { geo in
+            HandRankHeader(
+                handRankTitle: HandRankTitle(rank: .fifteen),
+                handRankPoints: HandRankPoints(points: 15),
+                geo: geo
+            )
+        }
     }
 }
