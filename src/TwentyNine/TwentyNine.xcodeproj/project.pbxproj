@@ -3,11 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		B5273DD0271A65C90096A78B /* PegsImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5273DCF271A65C90096A78B /* PegsImage.swift */; };
+		B533F096272A0E9100AB9C43 /* HandRankHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B533F095272A0E9100AB9C43 /* HandRankHeader.swift */; };
+		B533F098272A10E800AB9C43 /* HandRankTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B533F097272A10E800AB9C43 /* HandRankTitle.swift */; };
+		B533F0A4272A1A7900AB9C43 /* Forge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50ADA2C2709F83B0038219D /* Forge.framework */; platformFilter = ios; };
+		B533F0A5272A1A7900AB9C43 /* Forge.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B50ADA2C2709F83B0038219D /* Forge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B533F0A8272A1E1500AB9C43 /* HandRankPointTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B533F0A7272A1E1500AB9C43 /* HandRankPointTotal.swift */; };
 		B53D2D3226FFCA2B00069D0A /* TwentyNineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53D2D3126FFCA2B00069D0A /* TwentyNineApp.swift */; };
 		B53D2D3426FFCA2B00069D0A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53D2D3326FFCA2B00069D0A /* ContentView.swift */; };
 		B53D2D3626FFCA2C00069D0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B53D2D3526FFCA2C00069D0A /* Assets.xcassets */; };
@@ -19,6 +24,7 @@
 		B59E0E76272509CE006BB80A /* BreakdownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E0E75272509CE006BB80A /* BreakdownButton.swift */; };
 		B5C9B08F2724BDB9007A211B /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9B08E2724BDB9007A211B /* CollectionExtension.swift */; };
 		B5C9B09D2724FB04007A211B /* Breakdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9B09C2724FB04007A211B /* Breakdown.swift */; };
+		B5DBCB5D272B8C87004024D6 /* HandRankCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DBCB5C272B8C87004024D6 /* HandRankCards.swift */; };
 		B5F6BA81270A407A007A04A0 /* CardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA80270A407A007A04A0 /* CardButton.swift */; };
 		B5F6BA84270A40C3007A04A0 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA83270A40C3007A04A0 /* ModelData.swift */; };
 		B5F6BA88270A45D1007A04A0 /* CardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA87270A45D1007A04A0 /* CardRow.swift */; };
@@ -30,8 +36,6 @@
 		B5F6BA99270BE74B007A04A0 /* PipText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BA98270BE74B007A04A0 /* PipText.swift */; };
 		B5F6BADE2717A602007A04A0 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BADD2717A602007A04A0 /* Message.swift */; };
 		B5F6BAE02717A8BA007A04A0 /* MessagePaneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6BADF2717A8BA007A04A0 /* MessagePaneButton.swift */; };
-		B5F997EB27250E9A0065CC65 /* Forge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50ADA2C2709F83B0038219D /* Forge.framework */; };
-		B5F997EC27250E9A0065CC65 /* Forge.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B50ADA2C2709F83B0038219D /* Forge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5FDADB1271B6E8900864F69 /* PegsImageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FDADB0271B6E8900864F69 /* PegsImageRow.swift */; };
 		B5FDADB4271B6F6000864F69 /* HandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FDADB3271B6F6000864F69 /* HandView.swift */; };
 /* End PBXBuildFile section */
@@ -54,13 +58,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B5F997ED27250E9A0065CC65 /* Embed Frameworks */ = {
+		B533F0A6272A1A7900AB9C43 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B5F997EC27250E9A0065CC65 /* Forge.framework in Embed Frameworks */,
+				B533F0A5272A1A7900AB9C43 /* Forge.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,6 +74,9 @@
 /* Begin PBXFileReference section */
 		B50ADA2C2709F83B0038219D /* Forge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Forge.framework; path = ../../../../Forge.framework; sourceTree = "<group>"; };
 		B5273DCF271A65C90096A78B /* PegsImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PegsImage.swift; sourceTree = "<group>"; };
+		B533F095272A0E9100AB9C43 /* HandRankHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandRankHeader.swift; sourceTree = "<group>"; };
+		B533F097272A10E800AB9C43 /* HandRankTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandRankTitle.swift; sourceTree = "<group>"; };
+		B533F0A7272A1E1500AB9C43 /* HandRankPointTotal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandRankPointTotal.swift; sourceTree = "<group>"; };
 		B53D2D2E26FFCA2B00069D0A /* TwentyNine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwentyNine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53D2D3126FFCA2B00069D0A /* TwentyNineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyNineApp.swift; sourceTree = "<group>"; };
 		B53D2D3326FFCA2B00069D0A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +94,7 @@
 		B59E0E75272509CE006BB80A /* BreakdownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakdownButton.swift; sourceTree = "<group>"; };
 		B5C9B08E2724BDB9007A211B /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
 		B5C9B09C2724FB04007A211B /* Breakdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breakdown.swift; sourceTree = "<group>"; };
+		B5DBCB5C272B8C87004024D6 /* HandRankCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandRankCards.swift; sourceTree = "<group>"; };
 		B5E0FFD827250C3D00F6CF81 /* Forge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Forge.framework; path = ../../../../../Library/Forge.framework; sourceTree = "<group>"; };
 		B5F6BA80270A407A007A04A0 /* CardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardButton.swift; sourceTree = "<group>"; };
 		B5F6BA83270A40C3007A04A0 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
@@ -108,7 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5F997EB27250E9A0065CC65 /* Forge.framework in Frameworks */,
+				B533F0A4272A1A7900AB9C43 /* Forge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +153,18 @@
 				B5273DCF271A65C90096A78B /* PegsImage.swift */,
 			);
 			path = Pegs;
+			sourceTree = "<group>";
+		};
+		B533F094272A0E7B00AB9C43 /* Breakdown */ = {
+			isa = PBXGroup;
+			children = (
+				B533F0A7272A1E1500AB9C43 /* HandRankPointTotal.swift */,
+				B533F097272A10E800AB9C43 /* HandRankTitle.swift */,
+				B533F095272A0E9100AB9C43 /* HandRankHeader.swift */,
+				B5DBCB5C272B8C87004024D6 /* HandRankCards.swift */,
+				B5C9B09C2724FB04007A211B /* Breakdown.swift */,
+			);
+			path = Breakdown;
 			sourceTree = "<group>";
 		};
 		B53D2D2526FFCA2B00069D0A = {
@@ -214,6 +234,7 @@
 			children = (
 				B53D2D3326FFCA2B00069D0A /* ContentView.swift */,
 				B5FDADB2271B6F6000864F69 /* Hands */,
+				B533F094272A0E7B00AB9C43 /* Breakdown */,
 				B5F6BADC2717A5E5007A04A0 /* MessagePane */,
 				B5F6BAD8271362D5007A04A0 /* Cards */,
 				B5273DCE271A65B90096A78B /* Pegs */,
@@ -267,7 +288,6 @@
 			isa = PBXGroup;
 			children = (
 				B5FDADB3271B6F6000864F69 /* HandView.swift */,
-				B5C9B09C2724FB04007A211B /* Breakdown.swift */,
 			);
 			path = Hands;
 			sourceTree = "<group>";
@@ -282,7 +302,7 @@
 				B53D2D2A26FFCA2B00069D0A /* Sources */,
 				B53D2D2B26FFCA2B00069D0A /* Frameworks */,
 				B53D2D2C26FFCA2B00069D0A /* Resources */,
-				B5F997ED27250E9A0065CC65 /* Embed Frameworks */,
+				B533F0A6272A1A7900AB9C43 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -413,19 +433,23 @@
 				B53D2D3426FFCA2B00069D0A /* ContentView.swift in Sources */,
 				B5FDADB4271B6F6000864F69 /* HandView.swift in Sources */,
 				B5F6BA8A270A5053007A04A0 /* CardGrid.swift in Sources */,
+				B5DBCB5D272B8C87004024D6 /* HandRankCards.swift in Sources */,
 				B5C9B09D2724FB04007A211B /* Breakdown.swift in Sources */,
+				B533F0A8272A1E1500AB9C43 /* HandRankPointTotal.swift in Sources */,
 				B53D2D3226FFCA2B00069D0A /* TwentyNineApp.swift in Sources */,
 				B5F6BAE02717A8BA007A04A0 /* MessagePaneButton.swift in Sources */,
 				B5F6BA8C270A5F15007A04A0 /* CardGridRow.swift in Sources */,
 				B5FDADB1271B6E8900864F69 /* PegsImageRow.swift in Sources */,
 				B5F6BA81270A407A007A04A0 /* CardButton.swift in Sources */,
 				B5F6BA99270BE74B007A04A0 /* PipText.swift in Sources */,
+				B533F096272A0E9100AB9C43 /* HandRankHeader.swift in Sources */,
 				B59E0E76272509CE006BB80A /* BreakdownButton.swift in Sources */,
 				B5F6BA90270A6606007A04A0 /* MessagePane.swift in Sources */,
 				B5F6BA94270BD124007A04A0 /* SuitImage.swift in Sources */,
 				B5F6BADE2717A602007A04A0 /* Message.swift in Sources */,
 				B5F6BA88270A45D1007A04A0 /* CardRow.swift in Sources */,
 				B5C9B08F2724BDB9007A211B /* CollectionExtension.swift in Sources */,
+				B533F098272A10E800AB9C43 /* HandRankTitle.swift in Sources */,
 				B5F6BA84270A40C3007A04A0 /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +544,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
@@ -575,6 +600,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};
@@ -606,6 +632,18 @@
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Library",
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Library",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
 				);
@@ -651,6 +689,18 @@
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Library",
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Library",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Studio",
 				);

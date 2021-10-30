@@ -1,9 +1,9 @@
 //=============================================================================//
 //                                                                             //
-//  Breakdown.swift                                                            //
+//  BreakdownTitle.swift                                                       //
 //  29                                                                         //
 //                                                                             //
-//  Created by Tyler J. Otte on 10/23/21.                                      //
+//  Created by Tyler J. Otte on 10/27/21.                                      //
 //-----------------------------------------------------------------------------//
 //                                                                             //
 // This source file is part of the 29 project.                                 //
@@ -15,36 +15,30 @@
 //=============================================================================//
 
 import SwiftUI
-import Forge
 
-/// A `CribbageHand`s `HandRankScore` breakdown.
-struct Breakdown: View {
-    
-    /// The model's current data.
-    @EnvironmentObject var modelData: ModelData
-    
-    /// The content to display.
+
+struct BreakdownTitle: View {
     var body: some View {
-        ScrollView {
-            VStack {
-                Text("")
-                
-            }
+        HStack(spacing: 0) {
+            Text("\(title)\(plural)")
+                .frame(width: geometry.size.width * 0.63)
+                .padding(.leading, geometry.size.width * 0.18)
+                .padding(.vertical)
+                .background(Color.black)
+            Text("+ \(handRanks.totalPoints)")
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(Color.redGradient)
+                .border(width: 1, edges: [.leading], color: .white)
         }
-        .frame(maxWidth: .infinity)
-        .background(Color.redGradient)
-        .clipped()
-        .navigationTitle("Breakdown")
-        .navigationBarTitleDisplayMode(.inline)
+        .font(.system(.title2, design: .serif))
+        .foregroundColor(Color(hex: "FEFEFE"))
+        .border(Color.white, width: 1)
     }
 }
 
-/// The `HandBreakdown`'s preview configuration.
-struct Breakdown_Previews: PreviewProvider {
-    
-    /// The content to display.
+struct BreakdownTitle_Previews: PreviewProvider {
     static var previews: some View {
-        Breakdown()
-            .environmentObject(ModelData())
+        BreakdownTitle()
     }
 }
