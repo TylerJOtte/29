@@ -12,7 +12,7 @@
 		B533F098272A10E800AB9C43 /* HandRankTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B533F097272A10E800AB9C43 /* HandRankTitle.swift */; };
 		B533F0A4272A1A7900AB9C43 /* Forge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50ADA2C2709F83B0038219D /* Forge.framework */; platformFilter = ios; };
 		B533F0A5272A1A7900AB9C43 /* Forge.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B50ADA2C2709F83B0038219D /* Forge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B533F0A8272A1E1500AB9C43 /* HandRankPointTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B533F0A7272A1E1500AB9C43 /* HandRankPointTotal.swift */; };
+		B533F0A8272A1E1500AB9C43 /* HandRankPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B533F0A7272A1E1500AB9C43 /* HandRankPoints.swift */; };
 		B53D2D3226FFCA2B00069D0A /* TwentyNineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53D2D3126FFCA2B00069D0A /* TwentyNineApp.swift */; };
 		B53D2D3426FFCA2B00069D0A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53D2D3326FFCA2B00069D0A /* ContentView.swift */; };
 		B53D2D3626FFCA2C00069D0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B53D2D3526FFCA2C00069D0A /* Assets.xcassets */; };
@@ -76,7 +76,7 @@
 		B5273DCF271A65C90096A78B /* PegsImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PegsImage.swift; sourceTree = "<group>"; };
 		B533F095272A0E9100AB9C43 /* HandRankHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandRankHeader.swift; sourceTree = "<group>"; };
 		B533F097272A10E800AB9C43 /* HandRankTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandRankTitle.swift; sourceTree = "<group>"; };
-		B533F0A7272A1E1500AB9C43 /* HandRankPointTotal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandRankPointTotal.swift; sourceTree = "<group>"; };
+		B533F0A7272A1E1500AB9C43 /* HandRankPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandRankPoints.swift; sourceTree = "<group>"; };
 		B53D2D2E26FFCA2B00069D0A /* TwentyNine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwentyNine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53D2D3126FFCA2B00069D0A /* TwentyNineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyNineApp.swift; sourceTree = "<group>"; };
 		B53D2D3326FFCA2B00069D0A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 		B533F094272A0E7B00AB9C43 /* Breakdown */ = {
 			isa = PBXGroup;
 			children = (
-				B533F0A7272A1E1500AB9C43 /* HandRankPointTotal.swift */,
+				B533F0A7272A1E1500AB9C43 /* HandRankPoints.swift */,
 				B533F097272A10E800AB9C43 /* HandRankTitle.swift */,
 				B533F095272A0E9100AB9C43 /* HandRankHeader.swift */,
 				B5DBCB5C272B8C87004024D6 /* HandRankCards.swift */,
@@ -435,7 +435,7 @@
 				B5F6BA8A270A5053007A04A0 /* CardGrid.swift in Sources */,
 				B5DBCB5D272B8C87004024D6 /* HandRankCards.swift in Sources */,
 				B5C9B09D2724FB04007A211B /* Breakdown.swift in Sources */,
-				B533F0A8272A1E1500AB9C43 /* HandRankPointTotal.swift in Sources */,
+				B533F0A8272A1E1500AB9C43 /* HandRankPoints.swift in Sources */,
 				B53D2D3226FFCA2B00069D0A /* TwentyNineApp.swift in Sources */,
 				B5F6BAE02717A8BA007A04A0 /* MessagePaneButton.swift in Sources */,
 				B5F6BA8C270A5F15007A04A0 /* CardGridRow.swift in Sources */,

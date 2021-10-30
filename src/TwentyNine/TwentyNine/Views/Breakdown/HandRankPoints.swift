@@ -1,6 +1,6 @@
 //=============================================================================//
 //                                                                             //
-//  HandRankTitle.swift                                                        //
+//  HandRankPoints.swift                                                       //
 //  29                                                                         //
 //                                                                             //
 //  Created by Tyler J. Otte on 10/27/21.                                      //
@@ -14,33 +14,32 @@
 // See https://github.com/TylerJOtte/29/LICENSE.txt for more details.          //
 //=============================================================================//
 
-import SwiftUI
-import Forge
 
-/// A `HandRank Breakdown`'s title.
-struct HandRankTitle: View {
+import SwiftUI
+
+/// A `HandRank Breakdown`'s points.
+struct HandRankPoints: View {
     
-    /// The `HandRank` to display title for.
-    var rank: Rank
+    /// The `HandRank`'s points to display.
+    var points: Int
     
     /// The content to display.
     var body: some View {
-
-        Text(rank.title.plural)
+        Text("+ \(points)")
             .frame(maxWidth: .infinity)
             .padding()
             .font(.system(.title2, design: .serif))
-            .background(Color.black)
+            .background(Color.redGradient)
             .foregroundColor(.white)
             .border(.white, width: 0.5)
     }
 }
 
-/// The `HandRankTitle`'s preview configuration.
-struct HandRankTitle_Previews: PreviewProvider {
+/// The `HandRankPoint`'s preview configuration.
+struct HandRankPoints_Previews: PreviewProvider {
     
     /// The content to display.
     static var previews: some View {
-        HandRankTitle(rank: Rank.fourOfAKind)
+        HandRankPoints(points: 16)
     }
 }
