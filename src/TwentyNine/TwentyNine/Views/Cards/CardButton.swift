@@ -5,9 +5,7 @@
 //                                                                             //
 //  Created by Tyler J. Otte on 10/03/21.                                      //
 //-----------------------------------------------------------------------------//
-//                                                                             //
-// This source file is part of the 29 project.                                 //
-//                                                                             //
+//                                               ,.
 // Copyright (c) 2021, Tyler J. Otte.                                          //
 // Licensed under the GNU Affero General Public License v3.0.                  //
 //                                                                             //
@@ -20,6 +18,10 @@ import Forge
 /// A `PlayingCard Button`.
 struct CardButton: View {
 
+    //=========================================================================//
+    //                                ATTRIBUTES                               //
+    //=========================================================================//
+    
     /// The models' current data.
     @EnvironmentObject var modelData: ModelData
     
@@ -33,24 +35,21 @@ struct CardButton: View {
     var body: some View {
         Button(action: {
             
-            if (!isSelected && !modelData.hand.isFull()) {
+            if (addToHand()) {
                 
-                _ = try! modelData.deck.remove(card)
-                try! modelData.hand.add(card)
-                self.isSelected.toggle()
-                modelData.register = "Hi"
+                try! modelData.deck.deal(card, to: modelData.hand)
                
             } else if (isSelected) {
                 
                 _ = try! modelData.hand.remove(card)
                 try! modelData.deck.add(card)
-                self.isSelected.toggle()
-                modelData.register = "Bye"
                 
             } else {
             
-                
+
             }
+            
+            toggleButton()
             
         }) {
             Rectangle()
@@ -58,8 +57,36 @@ struct CardButton: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .border(isSelected ? Color.fire : .tundora,
                         width: isSelected ? 2 : 0.2)
-                .overlay(SuitImage(suit: card.suit))
+                .overlay(SuitImage(suit: card.suit)
+                            .padding(8))
+        }
     }
+    
+    //=========================================================================//
+    //                                 TESTERS                                 //
+    //=========================================================================//
+    
+    /// Determines if the `Card` should be added to the `Hand`.
+    ///
+    /// - Precondition: None.
+    /// - Postcondition: None.`
+    /// - Returns: True if the `Card` shouild be added to the `Hand`, else false.
+    private func addToHand() -> Bool {
+        
+        return !isSelected && !modelData.hand.isFull()
+    }
+    
+    //=========================================================================//
+    //                                UPDATERS                                 //
+    //=========================================================================//
+    
+    /// Toggles the button selection state
+    ///
+    /// - Precondition: None.
+    /// - Postcondition: The selection state is toggled to true/false inverse.
+    private func toggleButton() {
+        
+        self.isSelected.toggle()
     }
 }
 
@@ -71,7 +98,7 @@ struct CardButton_Previews: PreviewProvider {
     
     /// The content to display.
     static var previews: some View {
-        CardButton(card: try! modelData.deck.getNextCard())
+        CardButton(card: try! modelData.deck.getNextCard() )
             .environmentObject(modelData)
     }
 }
