@@ -18,35 +18,31 @@ import SwiftUI
 import Forge
 
 /// A `PlayingCard`'s pip `TextView`.
-struct PipText: View, Hashable {
+struct PipText: View {
     
     /// The pip to display.
     var pip: String
-    
+
+    /// The font color.
+    var foregroundColor: Color = .white
+
     // The content to display.
     var body: some View {
-        GeometryReader { geometry in
-            Text(pip)
-                .font(.system(size: 1000, design: .serif))
-                .foregroundColor(Color.white)
-                .shadow(radius: 5, x: 5, y: 15)
-                .minimumScaleFactor(0.1)
-                .frame(
-                    minWidth: 0,
-                    maxWidth: geometry.size.width,
-                    minHeight: 0,
-                    maxHeight: geometry.size.height,
-                    alignment: .center
-                )
-        }
+        Text(pip)
+            .font(.system(size: 1000, design: .serif))
+            .foregroundColor(foregroundColor)
+            .shadow(radius: 5, x: 5, y: 15)
+            .minimumScaleFactor(0.01)
     }
 }
 
 /// The `PipText`'s preview configuration.
-struct Pip_Previews: PreviewProvider {
+struct PipText_Previews: PreviewProvider {
     
     /// The content to display.
     static var previews: some View {
-        PipText(pip: try! ModelData().deck.getNextCard().pip)
+        PipText(pip: try! Ace(of: .hearts).pip)
+            .environmentObject(ModelData())
+
     }
 }

@@ -44,8 +44,7 @@ struct CardButton: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .border(isSelected ? Color.fire : .tundora,
                         width: isSelected ? 2 : 0.2)
-                .overlay(SuitImage(suit: card.suit)
-                    .padding(8))
+                .overlay(SuitImage(suit: card.suit).padding(3))
         }
     }
     

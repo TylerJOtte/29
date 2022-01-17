@@ -17,10 +17,10 @@
 import SwiftUI
 import Forge
 
-/// A `PlayingCard` grid.
+/// A grid of `CardButtonRows`s.
 struct CardGrid: View {
 
-    /// The `CardRow`s to display.
+    /// The `CardButtonRow`s to display.
     var rows: [CardRow]
     
     /// The first `CardButton`'s `PlayingCard`.
@@ -37,30 +37,35 @@ struct CardGrid: View {
     
     /// The content to display.
     var body: some View {
-        ZStack {
-            VStack(spacing: 0) {
-                ForEach(0..<rows.count) { row in
-                    rows[row]
+        GeometryReader { geo in
+            ZStack {
+                VStack(spacing: 0) {
+                    ForEach(0..<rows.count) { row in
+                        rows[row]
+                    }
                 }
+                
+                PipText(pip: firstCard?.pip ?? "")
+                    .frame(maxHeight: geo.size.height / 3)
             }
-            
-            PipText(pip: firstCard?.pip ?? "")
-                .scaleEffect(0.55)
-                .scaledToFit()
+            .border(Color.black, width: 0.5)
         }
-        .border(Color.black, width: 0.5)
     }
 }
 
 /// The `CardGrid`'s preview configuration.
 struct CardGrid_Previews: PreviewProvider {
 
+    /// The model's current data.
     static var modelData: ModelData = ModelData()
     
     /// The `CardButton`s to display.
-    static var buttons = try! modelData.deck
-        .getNextCard(4)
-        .map{ CardButton(card: $0)}
+    static var buttons = [
+        CardButton(card: try! Ace(of: .hearts)),
+        CardButton(card: try! Ace(of: .clubs)),
+        CardButton(card: try! Ace(of: .spades)),
+        CardButton(card: try! Ace(of: .diamonds))
+    ]
     
     /// The content to display.
     static var previews: some View {

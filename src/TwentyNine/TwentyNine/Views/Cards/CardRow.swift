@@ -17,9 +17,9 @@
 import SwiftUI
 import Forge
 
-/// A row of `PlayingCard`s.
+/// A row of `CardButton`s.
 struct CardRow: View {
-    
+
     /// The `CardButton`s to display.
     var buttons: [CardButton]
 
@@ -36,12 +36,14 @@ struct CardRow: View {
 /// The `CardRow`'s preview configuration.
 struct CardRow_Previews: PreviewProvider {
     
+    /// The model's current data.
     static var modelData: ModelData = ModelData()
     
     /// The `CardButton`s to display.
-    static var buttons = try! modelData.deck
-        .getNextCard(2)
-        .map{ CardButton(card: $0)}
+    static var buttons = [
+        CardButton(card: try! Ace(of: .hearts)),
+        CardButton(card: try! Ace(of: .clubs))
+    ]
     
     /// The content to display.
     static var previews: some View {
