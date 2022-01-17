@@ -35,19 +35,7 @@ struct CardButton: View {
     var body: some View {
         Button(action: {
             
-            if (addToHand()) {
-                
-                try! modelData.deck.deal(card, to: modelData.hand)
-               
-            } else if (isSelected) {
-                
-                try! modelData.deck.collect(card, from: modelData.hand)
-                
-            } else {
-            
-
-            }
-            
+            try! manageCard()
             toggleButton()
             
         }) {
@@ -57,7 +45,7 @@ struct CardButton: View {
                 .border(isSelected ? Color.fire : .tundora,
                         width: isSelected ? 2 : 0.2)
                 .overlay(SuitImage(suit: card.suit)
-                            .padding(8))
+                    .padding(8))
         }
     }
     
@@ -65,21 +53,53 @@ struct CardButton: View {
     //                                 TESTERS                                 //
     //=========================================================================//
     
-    /// Determines if the `Card` should be added to the `Hand`.
+    /// Determines if the `Deck` should deal the `Card` to the `Hand`.
     ///
     /// - Precondition: None.
     /// - Postcondition: None.`
-    /// - Returns: True if the `Card` shouild be added to the `Hand`, else false.
-    private func addToHand() -> Bool {
+    /// - Returns: True if the `Deck` should deal the `Card` to the `Hand`, else false.
+    private func dealCard() -> Bool {
         
         return !isSelected && !modelData.hand.isFull()
+    }
+    
+    /// Determines if the `Deck` should collect the `Card` from the `Hand`.
+    ///
+    /// - Precondition: None.
+    /// - Postcondition: None.`
+    /// - Returns: True if the `Deck` should collect the `Card` from the `Hand`.
+    private func collectCard() -> Bool {
+        
+        return isSelected && !modelData.deck.isFull()
     }
     
     //=========================================================================//
     //                                UPDATERS                                 //
     //=========================================================================//
     
-    /// Toggles the button selection state
+    /// Manages the transference of the button's `Card`, if necessary.
+    ///
+    /// - Precondition: None.
+    /// - Postcondition: The `Card` is removed from the `Deck` and added to the `Hand` if it is
+    ///                  not selected and the `Hand` is not full, or the `Card` is removed from the
+    ///                  `Hand` and added to the `Deck` if it is selected, else no transfer occurs.
+    private func manageCard() throws {
+        
+        if (dealCard()) {
+            
+            try modelData.deck.deal(card, to: modelData.hand)
+           
+        } else if (collectCard()) {
+            
+            try modelData.deck.collect(card, from: modelData.hand)
+            
+        } else {
+        
+            // Do nothing if not selected and Hand is full
+        }
+    }
+    
+    /// Toggles the button's selection state
     ///
     /// - Precondition: None.
     /// - Postcondition: The selection state is toggled to true/false inverse.
@@ -97,7 +117,7 @@ struct CardButton_Previews: PreviewProvider {
     
     /// The content to display.
     static var previews: some View {
-        CardButton(card: try! modelData.deck.getNextCard() )
+        CardButton(card: try! Ace(of: .hearts))
             .environmentObject(modelData)
     }
 }
