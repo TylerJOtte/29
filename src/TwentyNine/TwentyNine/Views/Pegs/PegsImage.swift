@@ -34,5 +34,6 @@ struct PegsImage_Previews: PreviewProvider {
     /// The content to display.
     static var previews: some View {
         PegsImage()
+            .environmentObject(ModelData())
     }
 }

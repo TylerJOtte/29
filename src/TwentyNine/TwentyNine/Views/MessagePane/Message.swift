@@ -40,6 +40,6 @@ struct Message_Previews: PreviewProvider {
     
     /// The content to display.
     static var previews: some View {
-        Message(text: ModelData().hand.isFull() ? "Select Hand" : "29")
+        Message(text: "Select Hand")
     }
 }

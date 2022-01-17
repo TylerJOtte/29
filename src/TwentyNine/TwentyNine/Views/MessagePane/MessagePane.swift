@@ -31,7 +31,7 @@ struct MessagePane: View {
         VStack {
             MessagePaneButton(title: "New Hand")
             Spacer()
-            Message(text: modelData.hand.isFull() ? "\(modelData.hand.getScore().points)" : "Select hand")
+            Message(text: modelData.hand.isFull() ? "\(modelData.hand.score.points)" : "Select hand")
             Spacer()
             BreakdownButton()
         }

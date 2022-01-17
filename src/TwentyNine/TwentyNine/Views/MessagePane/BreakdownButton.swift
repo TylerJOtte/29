@@ -36,5 +36,6 @@ struct BreakdownButton_Previews: PreviewProvider {
     /// The content to display.
     static var previews: some View {
         BreakdownButton()
+            .environmentObject(ModelData())
     }
 }
