@@ -34,7 +34,7 @@ struct SuitImage: View {
         Image(imageName)
             .resizable()
             .scaledToFit()
-            .padding(8)
+            .padding(5)
             .shadow(radius: 7)
     }
 }
@@ -44,6 +44,7 @@ struct SuitImage_Previews: PreviewProvider {
     
     /// The content to display.
     static var previews: some View {
-        SuitImage(suit: try! ModelData().deck.getNextCard().suit)
+        SuitImage(suit: Suit.hearts)
+        
     }
 }
