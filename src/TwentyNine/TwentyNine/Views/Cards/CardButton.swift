@@ -41,8 +41,7 @@ struct CardButton: View {
                
             } else if (isSelected) {
                 
-                _ = try! modelData.hand.remove(card)
-                try! modelData.deck.add(card)
+                try! modelData.deck.collect(card, from: modelData.hand)
                 
             } else {
             
