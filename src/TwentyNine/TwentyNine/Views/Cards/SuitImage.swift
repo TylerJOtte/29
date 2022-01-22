@@ -23,18 +23,17 @@ struct SuitImage: View {
     /// The `Suit` to configure `ImageView` for.
     var suit: Suit
     
-    /// The filename of the `Suit`'s image.
-    private var imageName: String {
+    /// The `Suit`'s image filename.
+    private var name: String {
         
         "\(suit)".dropLast().capitalized
     }
     
     /// The content to display
     var body: some View {
-        Image(imageName)
+        Image(name)
             .resizable()
             .scaledToFit()
-            .padding(5)
             .shadow(radius: 7)
     }
 }
