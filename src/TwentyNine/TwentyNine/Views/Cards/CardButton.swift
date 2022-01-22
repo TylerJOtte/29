@@ -25,26 +25,28 @@ struct CardButton: View {
     /// The models' current data.
     @EnvironmentObject var modelData: ModelData
     
-    /// The `Button`'s `PlayingCard`.
-    var card: PlayingCard
-
     /// True if the `Button` is selected, else false.
     @State private var isSelected = false
+    
+    /// The `Button`'s `PlayingCard`.
+    var card: PlayingCard
     
     /// The content to display.
     var body: some View {
         Button(action: {
             
-            try! manageCard()
-            toggleButton()
+            if (try! addCard()) {
+                
+                toggleButton()
+            }
             
         }) {
             Rectangle()
                 .fill(isSelected ? Color.tahunaSands : .camarone)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .border(isSelected ? Color.fire : .tundora,
-                        width: isSelected ? 2 : 0.2)
-                .overlay(SuitImage(suit: card.suit).padding(3))
+                        width: isSelected ? 2 : 0.23)
+                .overlay(SuitImage(suit: card.suit).padding(8))
         }
     }
     
@@ -76,13 +78,14 @@ struct CardButton: View {
     //                                UPDATERS                                 //
     //=========================================================================//
     
-    /// Manages the transference of the button's `Card`, if necessary.
+    /// Adds the `Card` to the `Deck` or `Hand`, if applicable
     ///
     /// - Precondition: None.
-    /// - Postcondition: The `Card` is removed from the `Deck` and added to the `Hand` if it is
-    ///                  not selected and the `Hand` is not full, or the `Card` is removed from the
-    ///                  `Hand` and added to the `Deck` if it is selected, else no transfer occurs.
-    private func manageCard() throws {
+    /// - Postcondition: The `Card` is added to the `Deck` or `Hand`, if applicable.
+    /// - Returns: True if the `Card` is added to the `Deck` or `Hand`, else false.
+    private func addCard() throws -> Bool {
+        
+        var addedCard = true
         
         if (dealCard()) {
             
@@ -92,10 +95,17 @@ struct CardButton: View {
             
             try modelData.deck.collect(card, from: modelData.hand)
             
-        } else {
+        } else { // Not selected and Hand is full
         
-            // Do nothing if not selected and Hand is full
+            addedCard = false
         }
+        
+        // Published complex types won't update (e.g., add Card to Hand) for
+        // some reason if don't register some type of simple primitive variable
+        // change.
+        modelData.register();
+        
+        return addedCard
     }
     
     /// Toggles the button's selection state
