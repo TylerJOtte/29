@@ -29,7 +29,7 @@ struct MessagePane: View {
     /// The content to display.
     var body: some View {
         VStack {
-            MessagePaneButton(title: "New Hand")
+            NewHandButton()
             Spacer()
             Message(text: modelData.hand.isFull() ? "\(modelData.hand.score.points)" : "Select hand")
             Spacer()
